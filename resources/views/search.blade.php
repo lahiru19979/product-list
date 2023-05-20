@@ -42,10 +42,9 @@
                                     </tr>
                                     @endforeach
 
-
                 </div>
             </div>
-</div>
+   </div>
 </div>
 <script>
     
@@ -53,4 +52,6 @@
     backButton.addEventListener('click', function() {
       window.history.back();
     });
-  </script>
+</script>
+</body>
+</html>

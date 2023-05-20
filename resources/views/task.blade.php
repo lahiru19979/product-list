@@ -10,13 +10,13 @@
 <body>
    
     <div class="container">
-    <div class="text-center">
+     <div class="text-center">
         <form class="form-inline my-2 my-lg-0" method="get" action="/search">
-        <div class="row">
-        <div class="col-md-9"></div>
-        <div class="col-md-2"><input type="text" name="keyword" class="form-control" placeholder="search"></div>
-        <div class="col-md-1"><button class="btn btn-primary" type="submit">Search</button></div>
-        </div>
+            <div class="row">
+            <div class="col-md-9"></div>
+            <div class="col-md-2"><input type="text" name="keyword" class="form-control" placeholder="search"></div>
+            <div class="col-md-1"><button class="btn btn-primary" type="submit">Search</button></div>
+            </div>
         </form>
         <h1>Product list</h1>
             <div class="row">
@@ -51,26 +51,28 @@
                        
                                     <tr>
 
-                                    <td>{{$task->id}}</td>
-                                    <td>{{$task->task}}</td>
-                                    <td>{{$task->description}}</td>
-                                     <td> @if($task->image)
-                                         <img src="{{ asset('storage/' . $task->image) }}" class="img-image" alt="Image" width="150px">
-                                         @endif
-                                    </td>
-                                    <td>
-                                        <a href="/updatetask/{{$task->id}}"  class="btn btn-success">Update</a>
-                                        @method('DELETE')<a href="/deletetask/{{$task->id}}"  class="btn btn-danger">Delete</a>  
-                                     </td>
+                                        <td>{{$task->id}}</td>
+                                        <td>{{$task->task}}</td>
+                                        <td>{{$task->description}}</td>
+                                        <td> @if($task->image)
+                                            <img src="{{ asset('storage/' . $task->image) }}" class="img-image" alt="Image" width="150px">
+                                            @endif
+                                        </td>
+                                        <td>
+                                            <a href="/updatetask/{{$task->id}}"  class="btn btn-success">Update</a>
+                                            @method('DELETE')<a href="/deletetask/{{$task->id}}"  class="btn btn-danger">Delete</a>  
+                                        </td>
                                     </tr>
                                     @endforeach
 
 
                 </div>
             </div>
-</div>
-</div>
+        </div>
+    </div>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <script>
     $(document).ready(function() {
         $('#clearButton').click(function() {
